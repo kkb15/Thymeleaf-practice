@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Condition Statement</title>
+</head>
+<body>
+    <h1>Thymeleaf Condition Statement</h1>
+
+    <!-- Elvis statement  -->
+    <h1>Use is <span th:style="${isActive ? 'color: green' : 'color:blue'}" th:text="${isActive ? 'ACTIVE' : 'Not ACTIVE'}"></span></h1>
+
+    <!-- if-unless condition  -->
+    <h1 th:if="${gender == 'M'}">Gender is Male</h1>
+    <h1 th:unless="${gender == 'M'}">Gender is Female</h1>
+
+    <!-- Switch-case for list items -->
+    <h3>Names and Corresponding Actions:</h3>
+    <ul>
+        <li th:switch="${'Smith'}"> 
+            <p th:case="'John'">John: Hello, John!</p>
+            <p th:case="'Jane'">Jane: Greetings, Jane!</p>
+            <p th:case="'Doe'">Doe: Hi there, Doe!</p>
+            <p th:case="'Smith'">Smith: Welcome, Smith!</p>
+            <p th:case="*">Unknown: Who are you?</p>
+        </li>
+    </ul>
+</body>
+</html>

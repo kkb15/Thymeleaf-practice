@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+    <h1>Going to traverse element in collection</h1>
+    <h3 th:text="${names}"></h3>
+
+    <ul>
+            <li th:each="n : ${names}" th:text="${n}">
+         </li>
+         
+         <hr>
+    
+        <li th:each="n, status : ${names}">
+            <span th:text="${status.index} + ' ' + ${n}"></span>
+        </li>
+        
+        <hr>
+        
+        <li th:each="n, status : ${names}" th:style="${status.odd} ? 'color:red;font-weight:bold' : 'color:green;font-weight:bold'" th:text="${n}">
+        </li>
+    </ul>
+
+</body>
+</html>

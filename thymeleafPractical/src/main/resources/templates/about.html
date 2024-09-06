@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>This is about page</h1>
+<h1>User name is </h1>
+<!-- <h1 th:text="${name)"></h1> -->
+<h1 th:text="${name}">Default Name</h1>
+<h1 th:text="${#strings.toUpperCase(name)}">Default Name</h1>
+<h1 th:text="${#strings.length(name)}">Default Name</h1>
+<h2>about page <span th:text="${message}"></span> </h2>
+
+<div th:with="a=5, b=57, n=${name}">
+<h1>value of a is <span th:text="${a}"></span></h1>
+<h1 th:text="'value of b is' +${b}"></h1>
+<h3 th:text="'sum of ' +${a}+ ' and ' +${b}+ ' is ' +${a+b}"></h3>
+</div>
+</body>
+</html>

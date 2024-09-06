@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Services Page</title>
+</head>
+<body>
+    <h1>This is the service page or fragment page</h1>
+
+    <!-- Going to bring footer class with parameters -->
+   <footer id="fragementTag" th:replace="footer :: footer1('This is title', 'This is subtitle')"></footer>
+    
+   <!--  value passing from controller -->
+    <footer id="fragementTag" th:replace="footer :: footer1(${title}, ${subtitle})"></footer>
+   
+
+    <!--  <div id="fragementTag" th:insert="footer :: footer1"></div> -->
+
+    <!-- <div id="fragementTag" th:include="footer"></div> -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer Fragment</title>
+</head>
+<body>
+
+<footer id="footerTag" th:fragment="footer1(title, subtitle)">
+    <div class="container">
+        <h1 th:text="${title}">Default Title</h1>
+        <h3 th:text="${subtitle}">Default Subtitle</h3>
+        <h1>This is Footer page</h1>
+        <h1>Feel free to learn</h1>
+    </div>
+
+    <p>© 2024 Your Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
